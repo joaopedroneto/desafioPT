@@ -1,0 +1,37 @@
+<po-page-detail
+	[p-title]="title">
+	<form [formGroup]="formPais">
+		<po-input 
+			class="po-sm-4 po-md-4 po-lg-3 po-xl-3"
+			formControlName="nome"
+			p-label="Nome">
+		</po-input>
+		<po-input 
+			class="po-sm-4 po-md-4 po-lg-3 po-xl-3"
+			formControlName="sigla"            
+			p-label="Sigla">
+		</po-input>
+		<po-number 
+			class="po-sm-4 po-md-4 po-lg-1 po-xl-1"
+			formControlName="ddi"
+			p-label="DDI" 
+			[p-maxlength]=3>
+		</po-number>
+		<po-input 
+			class="po-sm-12 po-md-12 po-lg-5 po-xl-5"
+			formControlName="continente"
+			p-label="Continente">
+		</po-input>
+	</form>
+	
+	<div class="po-row po-pt-2" style="justify-content: flex-end;">
+		<po-button 
+			class="po-sm-3 po-md-3 po-lg-1 po-xl-1"
+			(p-click)="salvar()"
+			p-label="Salvar"></po-button>
+		<po-button 
+			class="po-sm-3 po-md-3 po-lg-1 po-xl-1"
+			(p-click)="voltar()"
+			p-label="Cancelar"></po-button>
+	</div>
+</po-page-detail>
